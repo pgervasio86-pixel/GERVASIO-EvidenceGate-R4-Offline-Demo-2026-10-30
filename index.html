@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d24">
+  <meta name="description" content="GERVASIO EvidenceGate: cautious, source-grounded industrial decision review.">
+  <title>EvidenceGate | GERVASIO 5.0</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">G<span>.</span></div>
+        <div><div class="brand-name">GERVASIO <span>5.0</span></div><div class="brand-sub">INDUSTRIAL INTELLIGENCE LAB</div></div>
+      </div>
+      <div class="header-right"><span class="signal"><span class="pulse"></span> EVIDENCE ENGINE ACTIVE</span><span class="version">RELEASE 1.0</span></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="dash"></span> EVIDENCE-FIRST DECISION SYSTEM <span class="tiny-divider"></span> OPEN SOURCE</div>
+        <h1>Industrial claims.<br><em>Verifiable evidence.</em></h1>
+        <p class="hero-copy">Turn raw source material into a traceable review. Detect exact text matches, surface potential numeric inconsistencies, and preserve what is still unknown.</p>
+        <div class="hero-meta"><span><b>01</b> SOURCE INPUT</span><span class="connector"></span><span><b>02</b> VERIFICATION</span><span class="connector"></span><span><b>03</b> AUDIT RECEIPT</span></div>
+      </section>
+
+      <div class="workspace-header"><div><div class="section-kicker">WORKSPACE / 01</div><h2>New evidence review</h2></div><div id="mode-pill" class="mode-pill">OFFLINE · FREE</div></div>
+
+      <div class="workspace">
+        <section class="panel input-panel" aria-labelledby="input-title">
+          <div class="panel-head"><span class="panel-icon">01</span><div><h3 id="input-title">Provide the evidence</h3><p>Only information you intentionally paste is analyzed.</p></div></div>
+          <div class="form-body">
+            <label for="claims">CLAIMS TO CHECK <span>ONE PER LINE · UP TO 8</span></label>
+            <textarea id="claims" rows="4" maxlength="4000" spellcheck="false" placeholder="The trailer has four close-coupled axles."></textarea>
+            <div class="input-info">The system does not assume a claim is true because it appears in a document.</div>
+            <div class="field-spacer"></div>
+            <label for="source-title">EVIDENCE DOCUMENT <span>IDENTIFIER / TITLE</span></label>
+            <input id="source-title" maxlength="160" placeholder="Internal technical note - synthetic example">
+            <label for="evidence">SOURCE CONTENT <span>PASTE RELEVANT TEXT</span></label>
+            <textarea id="evidence" rows="7" maxlength="12000" placeholder="Insert an excerpt from the evidence here..."></textarea>
+            <label for="source-url">SOURCE URL <span>OPTIONAL · NEVER FETCHED</span></label>
+            <input id="source-url" type="url" maxlength="500" placeholder="https://example.org/document">
+            <div id="live-row" class="ai-option" hidden>
+              <input id="use-nemotron" type="checkbox">
+              <label for="use-nemotron">Request NVIDIA Nemotron advisory via Nebius Token Factory <small>Optional live API request; may incur charges depending on account credits.</small></label>
+            </div>
+            <div class="button-row"><button id="verify" class="primary-btn" type="button"><span class="button-symbol">↗</span> Run evidence check</button><button id="sample" class="secondary-btn" type="button">Load example</button></div>
+            <p class="error" id="error" role="alert" hidden></p>
+          </div>
+        </section>
+
+        <section class="panel result-panel" aria-labelledby="result-title">
+          <div class="panel-head"><span class="panel-icon outcome">02</span><div><h3 id="result-title">Verification output</h3><p>Every result exposes its exact evidence basis.</p></div></div>
+          <div class="result-content" id="results" aria-live="polite">
+            <div class="empty-state"><div class="empty-rings"><div class="empty-center">⌁</div></div><div class="empty-kicker">SYSTEM READY</div><h4>No report generated yet</h4><p>Add a claim and one source document, then run your first review.</p></div>
+          </div>
+          <div class="result-footer"><span>NO UNVERIFIED PERFORMANCE CLAIMS</span><button id="export" type="button" disabled>Export JSON report <span>↓</span></button></div>
+        </section>
+      </div>
+
+      <section class="principles"><div class="principle"><span class="principle-no">01 /</span><div><h4>Traceable by design</h4><p>Each result cites source identifiers and extracts. Input receives a deterministic SHA-256 digest.</p></div></div><div class="principle"><span class="principle-no">02 /</span><div><h4>No invented certainty</h4><p>Textual overlap never equals independent truth. Missing evidence stays visibly missing.</p></div></div><div class="principle"><span class="principle-no">03 /</span><div><h4>Optional Nemotron</h4><p>A separately enabled NVIDIA model can suggest additional checks; it cannot override the rule-based verdict.</p></div></div></section>
+    </main>
+    <footer><span>GERVASIO 5.0 / EVIDENCEGATE</span><span>LOCAL-FIRST · AUDITABLE · OPEN SOURCE</span><span>MIT LICENSE</span></footer>
+  </div>
+</body>
+</html>
