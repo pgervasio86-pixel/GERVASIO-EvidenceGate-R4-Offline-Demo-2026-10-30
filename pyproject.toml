@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gervasio-evidencegate"
+version = "1.0.0"
+description = "Evidence-grounded industrial claims review with optional NVIDIA Nemotron on Nebius"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+keywords = ["industrial", "verification", "evidence", "nebius", "nemotron"]
+
+[tool.setuptools.packages.find]
+include = ["evidencegate*"]
