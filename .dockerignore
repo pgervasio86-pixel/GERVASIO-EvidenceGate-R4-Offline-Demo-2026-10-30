@@ -1,0 +1,8 @@
+.git
+.env
+*.mp4
+*.webm
+__pycache__
+.pytest_cache
+.venv
+secrets
